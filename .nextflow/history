@@ -1,0 +1,2 @@
+2025-11-14 11:14:28	-	adoring_hilbert	-	1aff660d2c5d58a6bbc969d3c06e03c3	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-14 11:14:59	-	fabulous_lovelace	-	2b9cd69dbc1c0d477f19d8d7bd57b385	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
