@@ -1,10 +1,10 @@
 include { DOWNLOAD_BAM } from './modules/download_bam'
 include { BAM_CONVERT } from './modules/bam_convert'
-include { COUNTS_MATRIX } from './modules/counts_matrix'
+include { CELLRANGER_COUNT } from './modules/counts_matrix'
 
 workflow {
 Channel
-    .fromPath(params.samplesheet)
+    .fromPath(params.full_data)
     .splitCsv(header: true)
     .map { row -> tuple(row.sample, row.ftp) }
     .set { sample_urls }
@@ -15,5 +15,5 @@ Channel
     // Step 2: convert BAM → FASTQ
     BAM_CONVERT(DOWNLOAD_BAM.out.bam)
 
-    COUNTS_MATRIX(BAM_CONVERT.out.fastq)
+    CELLRANGER_COUNT(BAM_CONVERT.out.fastq, params.ref_genome)
 }

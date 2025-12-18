@@ -1,0 +1,164 @@
+Nov-18 16:15:11.432 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile singularity,local
+Nov-18 16:15:11.532 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Nov-18 16:15:11.567 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/usr4/bf527/agover11/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Nov-18 16:15:11.593 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-18 16:15:11.594 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-18 16:15:11.597 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-18 16:15:11.606 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-18 16:15:11.624 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /projectnb/bf528/students/agover11/single-cell-setup-agover11/nextflow.config
+Nov-18 16:15:11.626 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /projectnb/bf528/students/agover11/single-cell-setup-agover11/nextflow.config
+Nov-18 16:15:11.658 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /usr4/bf527/agover11/.nextflow/secrets/store.json
+Nov-18 16:15:11.662 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@a7f0ab6] - activable => nextflow.secret.LocalSecretsProvider@a7f0ab6
+Nov-18 16:15:11.667 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity,local`
+Nov-18 16:15:12.132 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cluster, conda, singularity, local]
+Nov-18 16:15:12.161 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Nov-18 16:15:12.180 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [loquacious_spence] DSL2 - revision: 42d42e4db7
+Nov-18 16:15:12.181 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-18 16:15:12.182 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-18 16:15:12.228 [main] DEBUG nextflow.Session - Session UUID: 3087eec5-14bd-42e3-bbff-77de9923f7fc
+Nov-18 16:15:12.228 [main] DEBUG nextflow.Session - Run name: loquacious_spence
+Nov-18 16:15:12.229 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-18 16:15:12.237 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-18 16:15:12.242 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-18 16:15:12.264 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (07:27 EDT)
+  System: Linux 4.18.0-553.70.1.el8_10.x86_64
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 23.0.2-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 2759880@scc-ge1 [192.168.20.229]
+  CPUs: 32 - Mem: 187 GB (8.7 GB) - Swap: 8 GB (7.9 GB)
+Nov-18 16:15:12.307 [main] DEBUG nextflow.Session - Work-dir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work [nfs]
+Nov-18 16:15:12.308 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /projectnb/bf528/students/agover11/single-cell-setup-agover11/bin
+Nov-18 16:15:12.320 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-18 16:15:12.329 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-18 16:15:12.334 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-18 16:15:12.356 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-18 16:15:12.363 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-18 16:15:12.436 [main] DEBUG nextflow.Session - Session start
+Nov-18 16:15:12.584 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-18 16:15:12.979 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-18 16:15:12.980 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-18 16:15:12.987 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-18 16:15:12.994 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=187 GB; capacity=32; pollInterval=100ms; dumpInterval=5m
+Nov-18 16:15:12.996 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-18 16:15:13.020 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'DOWNLOAD_BAM': maxForks=0; fair=false; array=0
+Nov-18 16:15:13.058 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-18 16:15:13.058 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-18 16:15:13.060 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BAM_CONVERT': maxForks=0; fair=false; array=0
+Nov-18 16:15:13.068 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-18 16:15:13.068 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-18 16:15:13.069 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'CELLRANGER_COUNT': maxForks=0; fair=false; array=0
+Nov-18 16:15:13.072 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CELLRANGER_COUNT, BAM_CONVERT, DOWNLOAD_BAM
+Nov-18 16:15:13.074 [main] DEBUG nextflow.Session - Igniting dataflow network (4)
+Nov-18 16:15:13.079 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DOWNLOAD_BAM
+Nov-18 16:15:13.079 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BAM_CONVERT
+Nov-18 16:15:13.080 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CELLRANGER_COUNT
+Nov-18 16:15:13.080 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_5c5f05ff206eb577: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/counts_matrix/main.nf
+  Script_3f9d434142fdb2ab: /projectnb/bf528/students/agover11/single-cell-setup-agover11/main.nf
+  Script_992ef987f653f5fe: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/bam_convert/main.nf
+  Script_5e1a4e9d91eb4316: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/download_bam/main.nf
+Nov-18 16:15:13.080 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-18 16:15:13.080 [main] DEBUG nextflow.Session - Session await
+Nov-18 16:15:13.268 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-18 16:15:13.275 [Task submitter] INFO  nextflow.Session - [6f/7ea498] Submitted process > DOWNLOAD_BAM (1)
+Nov-18 16:20:13.136 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 16:20:13.389 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 16:25:13.195 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 16:25:13.449 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 16:30:13.270 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 16:30:13.500 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 16:35:13.342 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 16:35:13.556 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 16:40:13.423 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 16:40:13.611 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 16:45:13.498 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 16:45:13.664 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 16:50:13.575 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 16:50:13.716 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 16:55:13.645 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 16:55:13.770 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 17:00:13.728 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 17:00:13.825 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 17:03:49.875 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: DOWNLOAD_BAM (1); status: COMPLETED; exit: 0; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/6f/7ea498615070d9317a3911346c78bb]
+Nov-18 17:03:49.879 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-18 17:03:49.894 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-18 17:03:49.894 [Task submitter] INFO  nextflow.Session - [39/cea571] Submitted process > DOWNLOAD_BAM (2)
+Nov-18 17:03:50.150 [Actor Thread 21] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://ghcr.io/bf528/cellranger:latest; path=/projectnb/bf528/students/agover11/single-cell-setup-agover11/work/singularity/ghcr.io-bf528-cellranger-latest.img
+Nov-18 17:05:13.782 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 17:05:14.187 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:10:13.784 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 17:10:14.277 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:15:13.866 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 17:15:14.352 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:20:13.936 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 17:20:14.429 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:25:14.023 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 17:25:14.507 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:28:33.162 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: DOWNLOAD_BAM (2); status: COMPLETED; exit: 0; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/39/cea5713bfea961701f0eedde96f935]
+Nov-18 17:28:33.209 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-18 17:28:33.210 [Task submitter] INFO  nextflow.Session - [9a/8f153f] Submitted process > BAM_CONVERT (1)
+Nov-18 17:30:14.074 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:30:15.235 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 4; name: BAM_CONVERT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/2d/a77f4dd077c92f38f4ef473e98263b]
+Nov-18 17:35:14.138 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:35:15.304 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 4; name: BAM_CONVERT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/2d/a77f4dd077c92f38f4ef473e98263b]
+Nov-18 17:40:14.185 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:40:15.378 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 4; name: BAM_CONVERT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/2d/a77f4dd077c92f38f4ef473e98263b]
+Nov-18 17:41:42.161 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: BAM_CONVERT (1); status: COMPLETED; exit: 0; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/9a/8f153fa582128829ac9ba0096b88a9]
+Nov-18 17:41:42.174 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-18 17:41:42.175 [Task submitter] INFO  nextflow.Session - [2d/a77f4d] Submitted process > BAM_CONVERT (2)
+Nov-18 17:41:42.184 [TaskFinalizer-3] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-18 17:45:14.222 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 4; name: BAM_CONVERT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/2d/a77f4dd077c92f38f4ef473e98263b]
+Nov-18 17:45:16.250 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/51/f486420a131c4c03aadf66bfd3362f]
+Nov-18 17:50:14.293 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 4; name: BAM_CONVERT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/2d/a77f4dd077c92f38f4ef473e98263b]
+Nov-18 17:50:16.316 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/51/f486420a131c4c03aadf66bfd3362f]
+Nov-18 17:52:06.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: BAM_CONVERT (2); status: COMPLETED; exit: 0; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/2d/a77f4dd077c92f38f4ef473e98263b]
+Nov-18 17:52:06.980 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-18 17:52:06.981 [Task submitter] INFO  nextflow.Session - [51/f48642] Submitted process > CELLRANGER_COUNT (1)
+Nov-18 17:55:14.381 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/51/f486420a131c4c03aadf66bfd3362f]
+Nov-18 17:55:17.029 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/54/b8a55d7acbaf07a881bdd79b076689]
+Nov-18 18:00:14.411 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/51/f486420a131c4c03aadf66bfd3362f]
+Nov-18 18:00:17.100 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/54/b8a55d7acbaf07a881bdd79b076689]

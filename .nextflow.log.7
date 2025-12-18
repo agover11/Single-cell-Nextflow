@@ -1,0 +1,209 @@
+Nov-17 13:50:31.627 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile singularity,local
+Nov-17 13:50:31.755 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Nov-17 13:50:31.791 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/usr4/bf527/agover11/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Nov-17 13:50:31.818 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-17 13:50:31.819 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-17 13:50:31.821 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-17 13:50:31.831 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-17 13:50:31.848 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /projectnb/bf528/students/agover11/single-cell-setup-agover11/nextflow.config
+Nov-17 13:50:31.850 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /projectnb/bf528/students/agover11/single-cell-setup-agover11/nextflow.config
+Nov-17 13:50:31.880 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /usr4/bf527/agover11/.nextflow/secrets/store.json
+Nov-17 13:50:31.883 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6fca2a8f] - activable => nextflow.secret.LocalSecretsProvider@6fca2a8f
+Nov-17 13:50:31.889 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity,local`
+Nov-17 13:50:32.345 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cluster, conda, singularity, local]
+Nov-17 13:50:32.379 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Nov-17 13:50:32.392 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [thirsty_leavitt] DSL2 - revision: 90c170a414
+Nov-17 13:50:32.393 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-17 13:50:32.393 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-17 13:50:32.441 [main] DEBUG nextflow.Session - Session UUID: 3087eec5-14bd-42e3-bbff-77de9923f7fc
+Nov-17 13:50:32.441 [main] DEBUG nextflow.Session - Run name: thirsty_leavitt
+Nov-17 13:50:32.441 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-17 13:50:32.449 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-17 13:50:32.454 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-17 13:50:32.483 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (07:27 EDT)
+  System: Linux 4.18.0-553.70.1.el8_10.x86_64
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 23.0.2-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 2066959@scc-gf2 [192.168.20.234]
+  CPUs: 32 - Mem: 187 GB (2.9 GB) - Swap: 8 GB (7.7 GB)
+Nov-17 13:50:32.520 [main] DEBUG nextflow.Session - Work-dir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work [nfs]
+Nov-17 13:50:32.521 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /projectnb/bf528/students/agover11/single-cell-setup-agover11/bin
+Nov-17 13:50:32.532 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-17 13:50:32.541 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-17 13:50:32.546 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-17 13:50:32.570 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-17 13:50:32.579 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-17 13:50:32.657 [main] DEBUG nextflow.Session - Session start
+Nov-17 13:50:32.819 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-17 13:50:33.280 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-17 13:50:33.281 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-17 13:50:33.287 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-17 13:50:33.295 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=187 GB; capacity=32; pollInterval=100ms; dumpInterval=5m
+Nov-17 13:50:33.297 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-17 13:50:33.320 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'DOWNLOAD_BAM': maxForks=0; fair=false; array=0
+Nov-17 13:50:33.361 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-17 13:50:33.361 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-17 13:50:33.362 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BAM_CONVERT': maxForks=0; fair=false; array=0
+Nov-17 13:50:33.370 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-17 13:50:33.370 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-17 13:50:33.371 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'CELLRANGER_COUNT': maxForks=0; fair=false; array=0
+Nov-17 13:50:33.375 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CELLRANGER_COUNT, BAM_CONVERT, DOWNLOAD_BAM
+Nov-17 13:50:33.377 [main] DEBUG nextflow.Session - Igniting dataflow network (4)
+Nov-17 13:50:33.382 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DOWNLOAD_BAM
+Nov-17 13:50:33.383 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BAM_CONVERT
+Nov-17 13:50:33.383 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CELLRANGER_COUNT
+Nov-17 13:50:33.383 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_3646a69efcd52e1a: /projectnb/bf528/students/agover11/single-cell-setup-agover11/main.nf
+  Script_992ef987f653f5fe: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/bam_convert/main.nf
+  Script_c7ab1ef11e07d57a: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/counts_matrix/main.nf
+  Script_5e1a4e9d91eb4316: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/download_bam/main.nf
+Nov-17 13:50:33.384 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-17 13:50:33.384 [main] DEBUG nextflow.Session - Session await
+Nov-17 13:50:33.574 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [e6/6ffe1b] Cached process > DOWNLOAD_BAM (2)
+Nov-17 13:50:33.574 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [a9/596fcf] Cached process > DOWNLOAD_BAM (1)
+Nov-17 13:50:33.641 [Actor Thread 23] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://ghcr.io/bf528/cellranger:latest; path=/projectnb/bf528/students/agover11/single-cell-setup-agover11/work/singularity/ghcr.io-bf528-cellranger-latest.img
+Nov-17 13:50:33.654 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [2f/af78ea] Cached process > BAM_CONVERT (1)
+Nov-17 13:50:33.657 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [35/eb0f09] Cached process > BAM_CONVERT (2)
+Nov-17 13:50:33.672 [Actor Thread 17] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-17 13:50:33.725 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-17 13:50:33.726 [Task submitter] INFO  nextflow.Session - [8d/02ed7e] Submitted process > CELLRANGER_COUNT (1)
+Nov-17 13:51:23.666 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: COMPLETED; exit: 1; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/8d/02ed7eebf9a2d74c91379d19ba9f40]
+Nov-17 13:51:23.669 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-17 13:51:23.687 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-17 13:51:23.688 [Task submitter] INFO  nextflow.Session - [ae/17bece] Submitted process > CELLRANGER_COUNT (2)
+Nov-17 13:51:23.728 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=CELLRANGER_COUNT (1); work-dir=/projectnb/bf528/students/agover11/single-cell-setup-agover11/work/8d/02ed7eebf9a2d74c91379d19ba9f40
+  error [nextflow.exception.ProcessFailedException]: Process `CELLRANGER_COUNT (1)` terminated with an error exit status (1)
+Nov-17 13:51:23.752 [TaskFinalizer-1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'CELLRANGER_COUNT (1)'
+
+Caused by:
+  Process `CELLRANGER_COUNT (1)` terminated with an error exit status (1)
+
+
+Command executed:
+
+  cellranger count --id=HIPP_sc_rep1            --transcriptome=refdata-gex-GRCm39-2024-A            --create-bam=true            --localcores=1            --fastqs=fastq_out
+
+Command exit status:
+  1
+
+Command output:
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MAKE_SHARD
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MAKE_SHARD
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MAKE_SHARD
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNAUP_VDJ_DEMUX
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SETUP_VDJ_DEMUX
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SETUP_VDJ_DEMUX
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.MULTI_SETUP_CHUNKS
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.MULTI_SETUP_CHUNKS
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MAKE_SHARD
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MAKE_SHARD
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MAKE_SHARD
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.RUST_BRIDGE
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.ASSEMBLE_VDJ
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.RUST_BRIDGE
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.RUST_BRIDGE
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MERGE_METRICS
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.ASSEMBLE_VDJ
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MERGE_METRICS
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MERGE_METRICS
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.ASSEMBLE_VDJ
+  2025-11-17 13:50:58 [runtime] (chunks_complete) ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.COUNT_GEM_WELL_PROCESSOR._BASIC_SC_RNA_COUNTER._MATRIX_COMPUTER.DISABLE_CORRECTION_FACTOR
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.COUNT_GEM_WELL_PROCESSOR._BASIC_SC_RNA_COUNTER._MATRIX_COMPUTER.COMPUTE_CORRECTION_FACTOR
+  2025-11-17 13:51:07 [runtime] (chunks_complete) ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.WRITE_GENE_INDEX
+  2025-11-17 13:51:16 [runtime] (chunks_complete) ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.FULL_COUNT_INPUTS.WRITE_GENE_INDEX
+  2025-11-17 13:51:16 [runtime] (failed)          ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_CHEMISTRY_DETECTOR.DETECT_COUNT_CHEMISTRY
+  
+  [error] Pipestance failed. Error log at:
+  HIPP_sc_rep1/SC_RNA_COUNTER_CS/SC_MULTI_CORE/MULTI_CHEMISTRY_DETECTOR/DETECT_COUNT_CHEMISTRY/fork0/chnk0-u001e1b6e92/_errors
+  
+  Log message:
+  There were not enough reads to auto detect the chemistry: Sample bamtofastq in "/projectnb/bf528/students/agover11/single-cell-setup-agover11/work/2f/af78eabaee3272541f793eea3f0f33/fastq_out"
+  Note that you can avoid auto detection by specifying the specific chemistry type and version.
+  - Minimum number of required reads = 10000
+  - Number of reads available = 4347
+  
+  Waiting 6 seconds for UI to do final refresh.
+  Pipestance failed. Use --noexit option to keep UI running after failure.
+  
+  2025-11-17 13:51:22 Shutting down.
+  Saving pipestance info to "HIPP_sc_rep1/HIPP_sc_rep1.mri.tgz"
+  For assistance, upload this file to 10x Genomics by running:
+  
+  cellranger upload <your_email> "HIPP_sc_rep1/HIPP_sc_rep1.mri.tgz"
+
+Command error:
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MAKE_SHARD
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.BARCODE_CORRECTION
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.RUST_BRIDGE
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.ASSEMBLE_VDJ
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.RUST_BRIDGE
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.RUST_BRIDGE
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MERGE_METRICS
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.ASSEMBLE_VDJ
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_T_GD_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MERGE_METRICS
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.MERGE_METRICS
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.VDJ_B_GEM_WELL_PROCESSOR.SC_VDJ_CONTIG_ASSEMBLER.ASSEMBLE_VDJ
+  2025-11-17 13:50:58 [runtime] (chunks_complete) ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.COUNT_GEM_WELL_PROCESSOR._BASIC_SC_RNA_COUNTER._MATRIX_COMPUTER.DISABLE_CORRECTION_FACTOR
+  2025-11-17 13:50:58 [runtime] (ready)           ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_GEM_WELL_PROCESSOR.COUNT_GEM_WELL_PROCESSOR._BASIC_SC_RNA_COUNTER._MATRIX_COMPUTER.COMPUTE_CORRECTION_FACTOR
+  2025-11-17 13:51:07 [runtime] (chunks_complete) ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.WRITE_GENE_INDEX
+  2025-11-17 13:51:16 [runtime] (chunks_complete) ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.FULL_COUNT_INPUTS.WRITE_GENE_INDEX
+  2025-11-17 13:51:16 [runtime] (failed)          ID.HIPP_sc_rep1.SC_RNA_COUNTER_CS.SC_MULTI_CORE.MULTI_CHEMISTRY_DETECTOR.DETECT_COUNT_CHEMISTRY
+  
+  [error] Pipestance failed. Error log at:
+  HIPP_sc_rep1/SC_RNA_COUNTER_CS/SC_MULTI_CORE/MULTI_CHEMISTRY_DETECTOR/DETECT_COUNT_CHEMISTRY/fork0/chnk0-u001e1b6e92/_errors
+  
+  Log message:
+  There were not enough reads to auto detect the chemistry: Sample bamtofastq in "/projectnb/bf528/students/agover11/single-cell-setup-agover11/work/2f/af78eabaee3272541f793eea3f0f33/fastq_out"
+  Note that you can avoid auto detection by specifying the specific chemistry type and version.
+  - Minimum number of required reads = 10000
+  - Number of reads available = 4347
+  
+  Waiting 6 seconds for UI to do final refresh.
+  Pipestance failed. Use --noexit option to keep UI running after failure.
+  
+  2025-11-17 13:51:22 Shutting down.
+  Saving pipestance info to "HIPP_sc_rep1/HIPP_sc_rep1.mri.tgz"
+  For assistance, upload this file to 10x Genomics by running:
+  
+  cellranger upload <your_email> "HIPP_sc_rep1/HIPP_sc_rep1.mri.tgz"
+  
+  Thank you for using cellranger. To help us improve our product,
+  anonymized telemetry data has been collected and sent to 10X Genomics.
+  This data helps us understand usage patterns, diagnose issues,
+  and prioritize improvements.
+  
+  You can inspect the telemetry metrics sent by looking in
+  /usr4/bf527/agover11/.cache/tenx/telemetry/cellranger/cellranger-9.0.1
+  
+  For more details on what data is collected and how it's used, please visit
+  https://10xgen.com/pipeline-telemetry
+  
+  You can disable telemetry at any time by running the following command:
+  	cellranger telemetry disable
+
+Work dir:
+  /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/8d/02ed7eebf9a2d74c91379d19ba9f40
+
+Container:
+  /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/singularity/ghcr.io-bf528-cellranger-latest.img
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Nov-17 13:51:23.759 [TaskFinalizer-1] DEBUG nextflow.Session - Session aborted -- Cause: Process `CELLRANGER_COUNT (1)` terminated with an error exit status (1)
+Nov-17 13:51:23.775 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-17 13:51:23.776 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-17 13:51:23.776 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Nov-17 13:51:23.789 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Nov-17 13:51:23.823 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=4; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=0ms; failedDuration=49.9s; cachedDuration=37s;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Nov-17 13:51:24.006 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-17 13:51:24.022 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

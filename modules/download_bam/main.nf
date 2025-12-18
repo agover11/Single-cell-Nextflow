@@ -1,10 +1,10 @@
-process DOWNLOAD_BAM {
+process DOWNLOAD_FILE {
 
     input:
     tuple val(sample_id), val(url)
 
     output:
-    tuple val(sample_id), path('*bam*')
+    tuple val(sample_id), path('*bam*'), emit: bam
 
     script:
     """

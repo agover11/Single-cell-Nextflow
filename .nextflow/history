@@ -1,2 +1,24 @@
 2025-11-14 11:14:28	-	adoring_hilbert	-	1aff660d2c5d58a6bbc969d3c06e03c3	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
 2025-11-14 11:14:59	-	fabulous_lovelace	-	2b9cd69dbc1c0d477f19d8d7bd57b385	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 12:50:00	-	stoic_sanger	-	2b9cd69dbc1c0d477f19d8d7bd57b385	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 12:57:09	-	drunk_montalcini	-	f222781e30aacf0f0582b55df6714f54	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 12:57:37	-	happy_mcnulty	-	f222781e30aacf0f0582b55df6714f54	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 12:58:24	-	fabulous_avogadro	-	96ccdf7c93277fd8bd4b1e8c8e13816f	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:02:01	1m 32s	desperate_leavitt	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:21:45	3.4s	big_turing	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:28:54	2.9s	mighty_sanger	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:30:41	3s	admiring_mccarthy	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:34:28	2.1s	intergalactic_nobel	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:37:50	3.3s	nasty_colden	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:40:09	1.9s	golden_raman	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:42:15	2.9s	compassionate_williams	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:43:07	3.1s	pedantic_spence	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:45:38	5.9s	compassionate_snyder	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 13:50:32	52s	thirsty_leavitt	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 14:27:31	1.5s	adoring_lichterman	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 14:28:22	2.3s	clever_roentgen	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-17 14:30:14	20.9s	scruffy_edison	ERR	90c170a414e574c916f5a6d29bdef9b9	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-18 16:13:49	2s	infallible_perlman	ERR	42d42e4db7a5f942748921c561cc6267	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-18 16:15:12	-	loquacious_spence	-	42d42e4db7a5f942748921c561cc6267	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-18 19:24:06	13h 34m 5s	sad_lagrange	OK	42d42e4db7a5f942748921c561cc6267	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local
+2025-11-19 10:08:54	2m 45s	festering_darwin	OK	42d42e4db7a5f942748921c561cc6267	3087eec5-14bd-42e3-bbff-77de9923f7fc	nextflow run main.nf -profile singularity,local

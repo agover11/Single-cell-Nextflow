@@ -1,7 +1,7 @@
 #!/usr/bin/env nextflow
 
 process BAM_CONVERT {
-    label 'process_medium'
+    label 'process_high'
     container 'ghcr.io/bf528/cellranger:latest'
     publishDir params.outdir, mode: 'copy'
 
@@ -9,15 +9,13 @@ process BAM_CONVERT {
     tuple val(sample_id), path(bam)
 
     output:
-    tuple val(sample_id), path("*fastq.gz"), emit: fastq
+    tuple val(sample_id), path("fastq_out"), emit: fastq
 
     script:
     """
-    cellrangers bamtofastq \
+    cellranger bamtofastq \
         --nthreads $task.cpus \
         $bam \
         fastq_out
-
-    mv fastq_out/* .
     """
 }

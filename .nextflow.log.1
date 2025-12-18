@@ -1,60 +1,551 @@
-Nov-14 11:14:27.787 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile singularity,local
-Nov-14 11:14:27.857 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
-Nov-14 11:14:27.883 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/usr4/bf527/agover11/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
-Nov-14 11:14:27.911 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Nov-14 11:14:27.912 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Nov-14 11:14:27.915 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Nov-14 11:14:27.942 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Nov-14 11:14:27.963 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /projectnb/bf528/students/agover11/single-cell-setup-agover11/nextflow.config
-Nov-14 11:14:27.966 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /projectnb/bf528/students/agover11/single-cell-setup-agover11/nextflow.config
-Nov-14 11:14:27.997 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /usr4/bf527/agover11/.nextflow/secrets/store.json
-Nov-14 11:14:28.000 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@53093491] - activable => nextflow.secret.LocalSecretsProvider@53093491
-Nov-14 11:14:28.006 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity,local`
-Nov-14 11:14:28.486 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cluster, conda, singularity, local]
-Nov-14 11:14:28.493 [main] WARN  nextflow.config.ConfigBuilder - It appears you have never run this project before -- Option `-resume` is ignored
-Nov-14 11:14:28.515 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
-Nov-14 11:14:28.533 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [adoring_hilbert] DSL2 - revision: 1aff660d2c
-Nov-14 11:14:28.534 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Nov-14 11:14:28.534 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Nov-14 11:14:28.583 [main] DEBUG nextflow.Session - Session UUID: 3087eec5-14bd-42e3-bbff-77de9923f7fc
-Nov-14 11:14:28.583 [main] DEBUG nextflow.Session - Run name: adoring_hilbert
-Nov-14 11:14:28.583 [main] DEBUG nextflow.Session - Executor pool size: 32
-Nov-14 11:14:28.592 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Nov-14 11:14:28.596 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Nov-14 11:14:28.626 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-18 19:24:05.134 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile singularity,local
+Nov-18 19:24:05.310 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Nov-18 19:24:05.422 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/usr4/bf527/agover11/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Nov-18 19:24:05.454 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-18 19:24:05.455 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-18 19:24:05.457 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-18 19:24:05.469 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-18 19:24:05.489 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /projectnb/bf528/students/agover11/single-cell-setup-agover11/nextflow.config
+Nov-18 19:24:05.491 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /projectnb/bf528/students/agover11/single-cell-setup-agover11/nextflow.config
+Nov-18 19:24:05.530 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /usr4/bf527/agover11/.nextflow/secrets/store.json
+Nov-18 19:24:05.534 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@f14e5bf] - activable => nextflow.secret.LocalSecretsProvider@f14e5bf
+Nov-18 19:24:05.540 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity,local`
+Nov-18 19:24:06.062 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cluster, conda, singularity, local]
+Nov-18 19:24:06.095 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Nov-18 19:24:06.111 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [sad_lagrange] DSL2 - revision: 42d42e4db7
+Nov-18 19:24:06.112 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-18 19:24:06.113 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-18 19:24:06.166 [main] DEBUG nextflow.Session - Session UUID: 3087eec5-14bd-42e3-bbff-77de9923f7fc
+Nov-18 19:24:06.167 [main] DEBUG nextflow.Session - Run name: sad_lagrange
+Nov-18 19:24:06.167 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-18 19:24:06.181 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-18 19:24:06.187 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-18 19:24:06.302 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 25.04.6 build 5954
   Created: 01-07-2025 11:27 UTC (07:27 EDT)
   System: Linux 4.18.0-553.70.1.el8_10.x86_64
   Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 23.0.2-internal-adhoc.conda.src
   Encoding: UTF-8 (UTF-8)
-  Process: 2781230@scc-gf3 [192.168.20.235]
-  CPUs: 32 - Mem: 187 GB (15.5 GB) - Swap: 8 GB (7.9 GB)
-Nov-14 11:14:28.662 [main] DEBUG nextflow.Session - Work-dir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work [nfs]
-Nov-14 11:14:28.663 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /projectnb/bf528/students/agover11/single-cell-setup-agover11/bin
-Nov-14 11:14:28.675 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Nov-14 11:14:28.685 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Nov-14 11:14:28.690 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
-Nov-14 11:14:28.714 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Nov-14 11:14:28.723 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
-Nov-14 11:14:28.785 [main] DEBUG nextflow.Session - Session start
-Nov-14 11:14:28.970 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Nov-14 11:14:28.982 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-  Script_453905268c6a95c8: /projectnb/bf528/students/agover11/single-cell-setup-agover11/main.nf
-Nov-14 11:14:28.983 [main] DEBUG nextflow.Session - Session aborted -- Cause: Can't find a matching module file for include: ./modules/downlaod_bam
-Nov-14 11:14:28.992 [main] ERROR nextflow.cli.Launcher - Can't find a matching module file for include: ./modules/downlaod_bam
-java.nio.file.NoSuchFileException: Can't find a matching module file for include: ./modules/downlaod_bam
-	at nextflow.script.IncludeDef.realModulePath(IncludeDef.groovy:208)
-	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:109)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at Script_453905268c6a95c8.runScript(Script_453905268c6a95c8:1)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.script.BaseScript.run0(BaseScript.groovy:159)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
-	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
-	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
-	at nextflow.cli.Launcher.run(Launcher.groovy:513)
-	at nextflow.cli.Launcher.main(Launcher.groovy:673)
+  Process: 2501000@scc-ge2 [192.168.20.230]
+  CPUs: 32 - Mem: 187 GB (16 GB) - Swap: 8 GB (7.9 GB)
+Nov-18 19:24:06.359 [main] DEBUG nextflow.Session - Work-dir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work [nfs]
+Nov-18 19:24:06.360 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /projectnb/bf528/students/agover11/single-cell-setup-agover11/bin
+Nov-18 19:24:06.379 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-18 19:24:06.390 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-18 19:24:06.395 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-18 19:24:06.421 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-18 19:24:06.432 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-18 19:24:06.567 [main] DEBUG nextflow.Session - Session start
+Nov-18 19:24:06.758 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-18 19:24:07.162 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-18 19:24:07.163 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-18 19:24:07.170 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-18 19:24:07.184 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=187 GB; capacity=32; pollInterval=100ms; dumpInterval=5m
+Nov-18 19:24:07.188 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-18 19:24:07.213 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'DOWNLOAD_BAM': maxForks=0; fair=false; array=0
+Nov-18 19:24:07.252 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-18 19:24:07.252 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-18 19:24:07.253 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BAM_CONVERT': maxForks=0; fair=false; array=0
+Nov-18 19:24:07.261 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-18 19:24:07.261 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-18 19:24:07.262 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'CELLRANGER_COUNT': maxForks=0; fair=false; array=0
+Nov-18 19:24:07.266 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CELLRANGER_COUNT, BAM_CONVERT, DOWNLOAD_BAM
+Nov-18 19:24:07.267 [main] DEBUG nextflow.Session - Igniting dataflow network (4)
+Nov-18 19:24:07.285 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DOWNLOAD_BAM
+Nov-18 19:24:07.286 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BAM_CONVERT
+Nov-18 19:24:07.287 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CELLRANGER_COUNT
+Nov-18 19:24:07.288 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_372572d72b577376: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/bam_convert/main.nf
+  Script_7bd2e1f88feb4a0c: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/counts_matrix/main.nf
+  Script_3f9d434142fdb2ab: /projectnb/bf528/students/agover11/single-cell-setup-agover11/main.nf
+  Script_5e1a4e9d91eb4316: /projectnb/bf528/students/agover11/single-cell-setup-agover11/modules/download_bam/main.nf
+Nov-18 19:24:07.288 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-18 19:24:07.288 [main] DEBUG nextflow.Session - Session await
+Nov-18 19:24:07.494 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [6f/7ea498] Cached process > DOWNLOAD_BAM (1)
+Nov-18 19:24:07.494 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [39/cea571] Cached process > DOWNLOAD_BAM (2)
+Nov-18 19:24:07.531 [Actor Thread 23] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://ghcr.io/bf528/cellranger:latest; path=/projectnb/bf528/students/agover11/single-cell-setup-agover11/work/singularity/ghcr.io-bf528-cellranger-latest.img
+Nov-18 19:24:07.596 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-18 19:24:07.598 [Task submitter] INFO  nextflow.Session - [02/9f9607] Submitted process > BAM_CONVERT (2)
+Nov-18 19:29:07.297 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 4; name: BAM_CONVERT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/02/9f9607a4ceaea4d49b9bd8cc0d480a]
+Nov-18 19:29:07.714 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/92/1392f80b03e244b353ed3d79ebce37]
+Nov-18 19:34:07.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 4; name: BAM_CONVERT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/02/9f9607a4ceaea4d49b9bd8cc0d480a]
+Nov-18 19:34:07.795 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/92/1392f80b03e244b353ed3d79ebce37]
+Nov-18 19:37:31.274 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: BAM_CONVERT (2); status: COMPLETED; exit: 0; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/02/9f9607a4ceaea4d49b9bd8cc0d480a]
+Nov-18 19:37:31.278 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-18 19:37:31.294 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-18 19:37:31.295 [Task submitter] INFO  nextflow.Session - [92/1392f8] Submitted process > BAM_CONVERT (1)
+Nov-18 19:37:31.323 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-18 19:39:07.390 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/92/1392f80b03e244b353ed3d79ebce37]
+Nov-18 19:39:08.362 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 19:44:07.403 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/92/1392f80b03e244b353ed3d79ebce37]
+Nov-18 19:44:08.440 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 19:49:07.473 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: BAM_CONVERT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/92/1392f80b03e244b353ed3d79ebce37]
+Nov-18 19:49:08.516 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 19:50:18.988 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: BAM_CONVERT (1); status: COMPLETED; exit: 0; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/92/1392f80b03e244b353ed3d79ebce37]
+Nov-18 19:50:19.005 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-18 19:50:19.006 [Task submitter] INFO  nextflow.Session - [c1/bf63a1] Submitted process > CELLRANGER_COUNT (1)
+Nov-18 19:54:07.488 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 19:54:09.075 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 19:59:07.530 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 19:59:09.155 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:04:07.531 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:04:09.233 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:09:07.563 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:09:09.314 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:14:07.571 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:14:09.392 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:19:07.656 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:19:09.471 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:24:07.742 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:24:09.547 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:29:07.825 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:29:09.622 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:34:07.921 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:34:09.697 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:39:08.013 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:39:09.771 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:44:08.070 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:44:09.843 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:49:08.117 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:49:09.916 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:54:08.193 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:54:09.986 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 20:59:08.258 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 20:59:10.051 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:04:08.298 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:04:10.114 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:09:08.372 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:09:10.177 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:14:08.457 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:14:10.236 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:19:08.539 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:19:10.285 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:24:08.621 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:24:10.335 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:29:08.705 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:29:10.385 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:34:08.770 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:34:10.432 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:39:08.845 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:39:10.478 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:44:08.921 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:44:10.522 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:49:09.002 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:49:10.569 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:54:09.095 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:54:10.618 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 21:59:09.181 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 21:59:10.668 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:04:09.252 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:04:10.716 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:09:09.321 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:09:10.761 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:14:09.395 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:14:10.824 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:19:09.465 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:19:10.864 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:24:09.539 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:24:10.907 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:29:09.627 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:29:10.951 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:34:09.721 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:34:10.994 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:39:09.747 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:39:11.040 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:44:09.790 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:44:11.105 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:49:09.874 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:49:11.148 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:54:09.951 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:54:11.211 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 22:59:09.992 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 22:59:11.253 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:04:10.086 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:04:11.328 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:09:10.164 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:09:11.376 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:14:10.242 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:14:11.420 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:19:10.313 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:19:11.463 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:24:10.410 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:24:11.505 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:29:10.395 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:29:11.550 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:34:10.446 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:34:11.593 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:39:10.475 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:39:11.638 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:44:10.572 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:44:11.684 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:49:10.606 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:49:11.736 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:54:10.674 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:54:11.798 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-18 23:59:10.760 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-18 23:59:11.841 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:04:10.775 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:04:11.934 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:09:10.840 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:09:11.995 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:14:10.915 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:14:12.038 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:19:11.001 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:19:12.081 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:24:11.075 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:24:12.123 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:29:11.078 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:29:12.167 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:34:11.161 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:34:12.222 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:39:11.235 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:39:12.269 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:44:11.323 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:44:12.311 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:49:11.404 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:49:12.374 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:54:11.471 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:54:12.416 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 00:59:11.549 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 00:59:12.458 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:04:11.614 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 01:04:12.502 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: NEW; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:08:13.420 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: CELLRANGER_COUNT (1); status: COMPLETED; exit: 0; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/c1/bf63a15dac9a9ecedc10d1e70a5322]
+Nov-19 01:08:13.482 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 01:08:13.483 [Task submitter] INFO  nextflow.Session - [0f/2fd365] Submitted process > CELLRANGER_COUNT (2)
+Nov-19 01:09:11.687 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:14:11.771 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:19:11.859 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:24:11.941 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:29:12.009 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:34:12.091 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:39:12.190 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:44:12.275 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:49:12.353 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:54:12.446 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 01:59:12.535 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:04:12.623 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:09:12.705 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:14:12.796 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:19:12.890 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:24:12.959 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:29:13.029 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:34:13.100 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:39:13.176 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:44:13.247 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:49:13.341 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:54:13.433 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 02:59:13.436 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:04:13.524 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:09:13.591 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:14:13.649 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:19:13.719 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:24:13.796 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:29:13.863 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:34:13.931 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:39:13.997 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:44:14.067 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:49:14.147 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:54:14.215 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 03:59:14.288 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:04:14.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:09:14.433 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:14:14.504 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:19:14.578 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:24:14.649 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:29:14.719 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:34:14.780 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:39:14.846 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:44:14.920 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:49:14.999 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:54:15.067 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 04:59:15.148 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:04:15.213 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:09:15.295 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:14:15.362 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:19:15.425 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:24:15.491 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:29:15.564 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:34:15.632 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:39:15.702 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:44:15.776 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:49:15.850 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:54:15.906 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 05:59:15.978 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:04:16.045 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:09:16.119 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:14:16.190 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:19:16.254 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:24:16.323 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:29:16.384 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:34:16.443 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:39:16.469 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:44:16.585 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:49:16.660 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:54:16.739 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 06:59:16.810 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:04:16.876 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:09:16.944 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:14:16.999 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:19:17.063 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:24:17.141 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:29:17.209 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:34:17.277 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:39:17.343 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:44:17.413 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:49:17.476 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:54:17.546 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 07:59:17.615 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:04:17.678 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:09:17.752 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:14:17.826 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:19:17.893 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:24:17.962 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:29:18.030 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:34:18.102 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:39:18.164 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:44:18.234 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:49:18.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:54:18.387 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: RUNNING; exit: -; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:56:29.289 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: CELLRANGER_COUNT (2); status: COMPLETED; exit: 0; error: -; workDir: /projectnb/bf528/students/agover11/single-cell-setup-agover11/work/0f/2fd365f25bca3ee6fea5f3f20d105e]
+Nov-19 08:56:29.336 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-19 08:56:29.372 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Nov-19 08:56:29.373 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-19 08:56:29.492 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Nov-19 08:56:34.513 [main] INFO  nextflow.util.ThreadPoolHelper - Waiting for file transfers to complete (1 files)
+Nov-19 08:57:34.524 [main] DEBUG nextflow.util.ThreadPoolHelper - Waiting for file transfers to complete (1 files)
+Nov-19 08:58:09.658 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Nov-19 08:58:09.840 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=4; failedCount=0; ignoredCount=0; cachedCount=2; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=13h 32m 21s; failedDuration=0ms; cachedDuration=1h 13m 20s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Nov-19 08:58:10.684 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-19 08:58:10.766 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Nov-19 08:58:10.767 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

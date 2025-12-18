@@ -1,5 +1,5 @@
 process CELLRANGER_COUNT {
-    label 'process_high'
+    label 'process_veryhigh'
     container 'ghcr.io/bf528/cellranger:latest'
     publishDir params.outdir, mode: 'copy'
 
@@ -12,11 +12,11 @@ process CELLRANGER_COUNT {
 
     script:
     """
-    cellranger count --id={sample_id} \
-           --transcriptome=/opt/refdata-gex-GRCh38-2020-A \
-           --sample=mysample \
-           --create-bam=true \
-           --localcores=16 \
-           --localmem=64
+    cellranger count --id=${sample_id} \
+        --transcriptome=$index \
+        --fastqs=$fastq_dir \
+        --create-bam=true \
+        --localcores=$task.cpus \
+        --localmem=256
     """
 }
