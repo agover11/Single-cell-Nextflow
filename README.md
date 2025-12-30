@@ -29,16 +29,13 @@ The workflow integrates **Nextflow** for pipeline automation and **Python/Scanpy
    - Use GEO accession/EMBL-ENA to locate BAM files  
    - Create a Nextflow channel that reads sample names and download links  
    - Use `wget` or another utility to download the files  
-
 2. **Convert BAM → FASTQ:**  
    - Use the `bamtofastq` utility within the Cell Ranger container  
    - Multi-threading can accelerate the process  
-
 3. **Run Cell Ranger Count:**  
    - Execute the `cellranger count` pipeline on the FASTQ files  
    - Reference genome (pre-downloaded): `/projectnb/bf528/materials/single_cell/refs/`  
    - Adjust resources per module as needed  
-
 4. **Re-run pipeline for full dataset:**  
    - Update samplesheet to the full dataset links  
    - Run the pipeline with appropriate CPU and memory allocation  
@@ -58,6 +55,6 @@ The workflow integrates **Nextflow** for pipeline automation and **Python/Scanpy
      - scanpy=1.11.1
      - ipykernel=6.29.5
 
-Citations
+Citations:
 Isaac Virshup, Sergei Rybakov, Fabian J. Theis, Philipp Angerer, F. Alexander Wolf. anndata: Annotated data, JOSS 2024 Sep 16. doi: 10.21105/joss.04371
 Wolf, F., Angerer, P. & Theis, F. SCANPY: large-scale single-cell gene expression data analysis, Genome Biol 19, 15 (2018). https://doi.org/10.1186/s13059-017-1382-0
